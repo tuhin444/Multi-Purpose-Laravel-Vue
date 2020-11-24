@@ -74,8 +74,8 @@ scratch. This page gets rid of all links and provides the needed markup only.
 
 
         <li class="nav-item">
-            <router-link to="/dashboard" class="nav-link">
-              <i class="nav-icon fas fa-th"></i>
+            <router-link to="/dashboard" class="nav-link ">
+              <i class="nav-icon fas fa-th text-blue blue"></i>
               <p>
                 Dashboard
               
@@ -83,21 +83,13 @@ scratch. This page gets rid of all links and provides the needed markup only.
             </router-link>
           </li> 
 
-          <li class="nav-item">
-           <router-link to="/profile" class="nav-link">
-              <i class="nav-icon fas fa-user"></i>
-              <p>
-                Profile
-               
-              </p>
-            </router-link>
-          </li>    
+          
           <li class="nav-item has-treeview">
             <a href="#" class="nav-link">
-              <i class="nav-icon fas fas fa-tasks"></i>
+              <i class="nav-icon fas fas fa-tasks green"></i>
               <p>
                Managment
-                <i class="right fas fa-angle-left"></i>
+                <i class="right fas fa-angle-left "></i>
 
               </p>
             </a>
@@ -116,15 +108,26 @@ scratch. This page gets rid of all links and provides the needed markup only.
               </li>
             </ul>
           </li>
-           <li class="nav-item">
-            <a href="#" class="nav-link">
-              <i class="nav-icon fas fa-power-off"></i>
-            
+         <li class="nav-item">
+           <router-link to="/profile" class="nav-link">
+              <i class="nav-icon fas fa-user orange"></i>
               <p>
-                Logout
-              
+                Profile
+               
               </p>
+            </router-link>
+          </li> 
+
+           <li class="nav-item">
+            <a href="{{ route('logout') }}" class="nav-link"  onclick="event.preventDefault();
+                        document.getElementById('logout-form').submit();">
+              <i class="nav-icon fas fa-power-off red"></i>
+              <p> Logout </p>
             </a>
+            <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
+               @csrf
+           </form>
+              
           </li>  
          
         </ul>
