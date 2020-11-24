@@ -144,7 +144,8 @@ scratch. This page gets rid of all links and provides the needed markup only.
       <div class="container-fluid">
          <router-view></router-view>
         <!-- /.row -->
-      </div><!-- /.container-fluid -->
+     </div> 
+      <!-- /.container-fluid -->
     </div>
     <!-- /.content -->
   </div>
