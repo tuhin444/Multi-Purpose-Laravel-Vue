@@ -61,7 +61,7 @@
                     </button>
                   </div>
 
-                 <form @submit.prevent = "createUser()">
+                 <form @submit.prevent = "createUser">
                   <div class="modal-body">
                      
                      <div class="form-group">
@@ -129,7 +129,7 @@
      data(){
         return{
          form: new Form({
-            id:'',
+           
             name : '',
             email: '',
             password: '',
