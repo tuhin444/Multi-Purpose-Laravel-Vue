@@ -5,7 +5,16 @@ window.Vue = require('vue');
 import VueRouter from 'vue-router'
 Vue.use(VueRouter)
 
+/// vue js validation
 
+import { Form, HasError, AlertError } from 'vform';
+window.Form = Form;
+Vue.component(HasError.name, HasError)
+Vue.component(AlertError.name, AlertError)
+
+
+
+/// vue js validation
 
 let routes = [{
     path: '/dashboard',
