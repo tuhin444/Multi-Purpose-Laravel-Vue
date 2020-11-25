@@ -5,6 +5,8 @@ window.Vue = require('vue');
 import VueRouter from 'vue-router'
 Vue.use(VueRouter)
 
+import moment from 'moment';
+
 /// vue js validation
 
 import { Form, HasError, AlertError } from 'vform';
@@ -15,6 +17,17 @@ Vue.component(AlertError.name, AlertError)
 
 
 /// vue js validation
+ /// Upercase
+Vue.filter('upText', function(text){
+    return text.charAt(0).toUpperCase() + text.slice(1)
+});
+
+/// moment
+Vue.filter('myDate',function(created){
+   return moment().format('MMMM Do YYYY, h:mm:ss a');
+});
+
+
 
 let routes = [{
     path: '/dashboard',

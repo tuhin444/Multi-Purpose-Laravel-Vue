@@ -15,7 +15,7 @@ class UserController extends Controller
      */
     public function index()
     {
-        echo "hi"; 
+        return User::latest()->paginate(); 
     }
 
     /**
