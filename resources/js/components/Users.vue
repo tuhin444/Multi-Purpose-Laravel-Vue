@@ -156,11 +156,13 @@
            this.$Progress.start();
            this.form.post('/api/user');
 
+         
+
            Fire.$emit('AfterCreate');
 
            $('#addNew').modal('hide') 
 
-          toast.fire({
+           toast.fire({
                   type: 'success',
                   title: 'User Created in successfully'
                 })
@@ -173,7 +175,7 @@
     created() {
       
       this.loadUser();
-      
+
       Fire.$on('AfterCreate',() =>{
         this.loadUser();
       });
