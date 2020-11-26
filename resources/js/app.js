@@ -24,7 +24,7 @@ Vue.filter('upText', function(text){
 
 /// moment
 Vue.filter('myDate',function(created){
-   return moment().format('MMMM Do YYYY, h:mm:ss a');
+   return moment(created).format('MMMM Do YYYY');
 });
 
 //// VueProgressBar
