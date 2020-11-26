@@ -27,6 +27,28 @@ Vue.filter('myDate',function(created){
    return moment().format('MMMM Do YYYY, h:mm:ss a');
 });
 
+//// VueProgressBar
+
+import VueProgressBar from 'vue-progressbar'
+Vue.use(VueProgressBar, {
+    color: 'rgb(143, 255, 199)',
+    failedColor: 'red',
+    height: '3px'
+  })
+
+import swal from 'sweetalert2'
+window.swal = swal;
+
+const toast = swal.mixin({
+  toast: true,
+  position: 'top-end',
+  showConfirmButton: false,
+  timer: 3000
+});
+
+
+window.toast = toast;
+
 
 
 let routes = [{
