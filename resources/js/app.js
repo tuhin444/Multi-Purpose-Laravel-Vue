@@ -45,9 +45,10 @@ const toast = swal.mixin({
   showConfirmButton: false,
   timer: 3000
 });
-
-
 window.toast = toast;
+
+
+window.Fire = new Vue();
 
 
 
